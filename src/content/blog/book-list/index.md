@@ -13,7 +13,7 @@ publicationDate: 2024-08-03
 
 
 ![Nexus: A Brief History of Information Networks from the Stone Age to AI](./unicorn-mystic.jpg) -->
-#the mythical man-month fred brooks 
-#working effectively with legacy code //software testing 
-#the wast majority of world lives in sql - orm 
-#Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems
+- The Mythical Man-Month by Fred Brooks
+- Working Effectively with Legacy Code // Software Testing
+- The vast majority of world lives in SQL - ORM
+- Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems

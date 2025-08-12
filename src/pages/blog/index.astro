@@ -1,20 +1,33 @@
 ---
 import { getCollection } from "astro:content";
-
 import BaseLayout from "@/layouts/BaseLayout.astro";
-
-import Post from "@/components/Post.astro";
 import SeoPage from "@/components/SeoPage.astro";
 
-const posts = (await getCollection("blog")).sort(
-  (a, b) => b.data.publicationDate.valueOf() - a.data.publicationDate.valueOf(),
-);
+const posts = await getCollection("blog");
 ---
 
-<BaseLayout >
-  <SeoPage slot="head" title="Blog" />
-  <h2 class="mb-3 text-lg font-bold">Blog posts</h2>
-  <ul class="grid list-none gap-2 p-0">
-    {posts.map((post) => <Post post={post} />)}
+<BaseLayout>
+  <SeoPage slot="head" title="Blog Posts" />
+  <h2 class="mb-3 text-lg font-bold">Blog Posts</h2>
+  <ul class="list-none p-0">
+    {posts.map((post) => (
+      <li class="flex flex-col sm:flex-row sm:items-center gap-4 p-4 rounded-lg shadow-md border border-gray-100 transition-transform duration-300 group hover:scale-[1.02]" key={post.slug}>
+        {post.data.image && (
+          <img
+            src={post.data.image}
+            alt={post.data.imageAlt || post.data.title}
+            class="w-20 h-20 object-cover rounded-md"
+            loading="lazy"
+          />
+        )}
+        <div class="flex-1">
+          <a href={`/myblog/blog/${post.slug}`} class="block hover:text-blue-300 transition-colors duration-200">
+            <h3 class="text-xl font-semibold">{post.data.title}</h3>
+          </a>
+          <p class="text-sm text-gray-500">{post.data.description}</p>
+          <div class="text-xs text-gray-400 mt-1">{post.data.publicationDate}</div>
+        </div>
+      </li>
+    ))}
   </ul>
 </BaseLayout>

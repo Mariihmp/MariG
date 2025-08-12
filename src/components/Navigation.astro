@@ -3,39 +3,58 @@ import { NAV_LINKS, SITE, SOCIAL_LINKS } from "@/siteConfig.ts";
 ---
 
 <header class="flex flex-wrap items-center justify-between pb-8">
-  
-  <a href="/" class="text-lg font-semibold sm:text-xl no-underline text-white flex items-center">
-    <img src="/favicon.ico" alt="Logo" class="w-6 h-6 mr-2" />
+  <a href="/myblog/" class="text-lg font-semibold sm:text-xl no-underline text-white flex items-center">
+    <img src="/myblog/favicon.ico" alt="Logo" class="w-6 h-6 mr-2" />
     {SITE.title}
   </a>
-  
-
-  
   <nav>
     <ul class="flex list-none items-center gap-2 p-0 sm:gap-3">
-      {
-        Object.keys(NAV_LINKS).map((navItemKey) => {
-          return (
-            <li>
-              <a 
-                href={NAV_LINKS[navItemKey].path}
-                class="relative px-3 py-2 text-white font-medium 
-                       rounded-md border border-transparent 
-                       no-underline 
-                       backdrop-blur-md bg-opacity-40 
-                       hover:bg-opacity-70 
-                       hover:border-white 
-                       hover:text-gray-700
-                       transition-all duration-300 ease-in-out"
-              >
-                {NAV_LINKS[navItemKey].label}
-                <span class="absolute inset-0 rounded-md border-2 border-transparent 
-                             hover:border-white transition-all"></span>
-              </a>
-            </li>
-          );
-        })
-      }
+      <li>
+        <a href={NAV_LINKS.blog.path} class="relative px-3 py-2 text-white font-medium 
+                   rounded-md border border-transparent 
+                   no-underline 
+                   backdrop-blur-md bg-opacity-40 
+                   hover:bg-opacity-70 
+                   hover:border-white 
+                   hover:text-gray-700
+                   transition-all duration-300 ease-in-out">
+          Blog
+          <span class="absolute inset-0 rounded-md border-2 border-transparent 
+                       hover:border-white transition-all"></span>
+        </a>
+      </li>
+      <li>
+        <a href={NAV_LINKS.projects.path} class="relative px-3 py-2 text-white font-medium 
+                   rounded-md border border-transparent 
+                   no-underline 
+                   backdrop-blur-md bg-opacity-40 
+                   hover:bg-opacity-70 
+                   hover:border-white 
+                   hover:text-gray-700
+                   transition-all duration-300 ease-in-out">
+          Projects
+          <span class="absolute inset-0 rounded-md border-2 border-transparent 
+                       hover:border-white transition-all"></span>
+        </a>
+      </li>
+      <li>
+        <a href={NAV_LINKS.about.path} class="relative px-3 py-2 text-white font-medium 
+                   rounded-md border border-transparent 
+                   no-underline 
+                   backdrop-blur-md bg-opacity-40 
+                   hover:bg-opacity-70 
+                   hover:border-white 
+                   hover:text-gray-700
+                   transition-all duration-300 ease-in-out">
+          About
+          <span class="absolute inset-0 rounded-md border-2 border-transparent 
+                       hover:border-white transition-all"></span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+      </li>
     </ul>
   </nav>
 </header>
