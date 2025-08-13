@@ -32,6 +32,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./_site
 
       # For Vercel/Netlify, replace the deploy step above with the appropriate action.
