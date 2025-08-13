@@ -8,7 +8,7 @@ export const SITE: SiteConfiguration = {
   title: "NeonHive",
   description:
     "my blog page where I try to be a great story teller",
-  url: "https://barebones.superwebthemes.com",
+  url: "https://mariihmp.github.io",
   author: "MariG",
   locale: "en-US",
 };
