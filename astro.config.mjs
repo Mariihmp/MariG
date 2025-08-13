@@ -9,7 +9,8 @@ import remarkEmbedYouTube from "./src/utils/remark-embed-youtube.js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://barebones.superwebthemes.com",
+  site: 'https://mayaasoift.github.io/myblog/',
+  base: '/myblog/',
   integrations: [tailwind(), sitemap(),customEmbeds()],
   markdown: {
     remarkPlugins: [remarkEmbedYouTube],

@@ -35,13 +35,18 @@ main, article, section {
   }
 
   body {
-    background-color: light-dark(
-      rgb(var(--light-mode-background)),
-      rgb(var(--dark-mode-background))
-    );
-    background: url('/stars-bg.jpg') no-repeat center center fixed; 
+    background-color: rgb(var(--light-mode-background));
+    background: url('/myblog/stars-bg.jpg') no-repeat center center fixed; 
     background-size: 100% auto;
 
     animation: galaxyBackground 30s infinite ease-in-out;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: rgb(var(--dark-mode-background));
+      background: url('/myblog/stars-bg.jpg') no-repeat center center fixed;
+      background-size: 100% auto;
+    }
   }
 }
