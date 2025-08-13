@@ -1,5 +1,0 @@
-
-User-agent: *
-Allow: /
-
-Sitemap: https://mayaasoift.github.io/myblog/sitemap-index.xml
