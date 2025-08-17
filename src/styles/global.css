@@ -7,7 +7,26 @@ main, article, section {
   background-color: #000000;
   color: #ffffff;
 }
+.glass-effect {
+  /* The Magic: Blurs the background behind the element */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
 
+  /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.05);
+
+  /* Rounded Edges */
+  border-radius: 16px;
+
+  /* A subtle border to define the edge of the glass */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  /* Add some space inside the box */
+  padding: 1.5rem 2rem;
+  
+  /* Optional: A subtle shadow to lift the element */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
 
 @keyframes galaxyBackground {
   0% {
