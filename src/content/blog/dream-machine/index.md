@@ -2,8 +2,7 @@
 title: The Dream Machine
 description: A 3D Interactive Visualization of Your Thoughts
 publicationDate: 2024-08-20
-image: ./dream-machine.png
-# imageAlt: Eggs, larva, pupa, adult.
+
 tags: 
  - 3D Visualization
   - WebGL
@@ -13,7 +12,7 @@ tags:
 ## the dream machine project over view 
 
 ### one of the options here is to use: "Perlin Noise / Shader Effects → Procedural dream-like visuals" 
- converting text to theme with processing the langugage like this image user can write their feeeling and creating this world based on that feeling (maybe user can share more deatile about the dream so we can further recreat that world )  ![alt text](image.png)
+ converting text to theme with processing the langugage like this image user can write their feeeling and creating this world based on that feeling (maybe user can share more deatile about the dream so we can further recreat that world )
 
 import React, { useEffect, useRef, useState } from "react";
 import * as THREE from "three";

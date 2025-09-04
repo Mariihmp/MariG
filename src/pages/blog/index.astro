@@ -11,8 +11,8 @@ const posts = await getCollection("blog");
   <h2 class="mb-3 text-lg font-bold">Blog Posts</h2>
   <ul class="list-none p-0">
     {posts.map((post) => (
-      <li class="flex flex-col sm:flex-row sm:items-center gap-4 p-4 rounded-lg shadow-md border border-gray-100 transition-transform duration-300 group hover:scale-[1.02]" key={post.slug}>
-        {post.data.image && (
+  <li class="flex flex-col sm:flex-row sm:items-center gap-4 p-4 rounded-lg shadow-md border border-gray-100 transition-transform duration-300 group hover:scale-[1.02]">
+        {typeof post.data.image === 'string' && post.data.image && (
           <img
             src={post.data.image}
             alt={post.data.imageAlt || post.data.title}
